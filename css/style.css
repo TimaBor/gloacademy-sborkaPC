@@ -21,6 +21,7 @@ body, html {
     font-size: 62.5%;
     font-weight: 400;
     color: #fff;
+    background: #000000;
     background-image: url('../img/bgc.png');
     /* background-image: linear-gradient(to right top, #060606, #050504, #030303, #020201, #000000); */
 }
