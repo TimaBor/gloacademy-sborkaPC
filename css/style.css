@@ -15,6 +15,13 @@
     font-weight: 700;
 }
 
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/Roboto-Medium.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 500;
+}
+
 
 body, html {
     font-family: 'Roboto', sans-serif;
@@ -49,10 +56,14 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
 }
 
+:root {
+    --font-size: 1.6rem;
+}
+
 .btn {
     border-radius: 5rem;
     padding: 1rem 3rem;
-    font-size: 1.6rem;
+    font-size: var(--font-size);
     line-height: 150%;
     text-align: center;
     color: #fff;
@@ -73,6 +84,17 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 133rem;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+.section-title {
+    margin-bottom: 5rem;
+    padding-left: 13.3rem;
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 190%;
+    background-size: 90px 90px;
+    background-position: center left;
+    background-repeat: no-repeat;
 }
 
 .header {
@@ -107,7 +129,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .nav__link {
-    font-size: 1.6rem;
+    font-size: var(--font-size);
     line-height: 150%;
     text-align: center;
 }
@@ -179,7 +201,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .timer__descr {
     font-weight: 400;
-    font-size: 1.6rem;
+    font-size: var(--font-size);
     line-height: 140%;
     color: rgba(256, 256, 256, .4);
 }
@@ -219,7 +241,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .about__descr {
     font-weight: 400;
-    font-size: 1.6rem;
+    font-size: var(--font-size);
     line-height: 160%;
 }
 
@@ -235,20 +257,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .process__title {
     margin-bottom: 5rem;
-    padding-left: 13.3rem;
-    font-weight: 700;
-    font-size: 4.8rem;
-    line-height: 190%;
     background-image: url('../img/process-img.svg');
-    background-size: 90px 90px;
-    background-position: center left;
-    background-repeat: no-repeat;
 }
+
 
 .process__descr {
     max-width: 40rem;
     font-weight: 400;
-    font-size: 1.6rem;
+    font-size: var(--font-size);
     line-height: 160%;
     color: rgba(256, 256, 256, .5);
 }
@@ -287,3 +303,111 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 160%;
     color: rgba(256, 256, 256, .5);
 }
+
+/* team */
+
+.team {
+    padding-bottom: 20rem;
+}
+
+.team__title {
+    margin-bottom: 11rem;
+    background-image: url('../img/team-img.svg');
+    background-position: center left;
+}
+
+.team__wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 3rem;
+}
+
+.team__item {
+    height: auto;
+    grid-column: 4 span;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.team__img {
+    margin-bottom: 4rem;
+    border-radius: 100%;
+}
+
+.team__img img {
+    border-radius: 100%;
+    max-height: 19rem;
+    max-width: 19rem;
+}
+
+.team__name {
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 140%;
+}
+
+.team__prof {
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: var(--font-size);
+    line-height: 160%;
+    color: rgba(256, 256, 256, .8);
+}
+
+.footer {
+    padding-bottom: 24rem;
+}
+
+.footer__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer__title {
+    margin-bottom: 3rem;
+    font-weight: 700;
+    font-size: 4.8rem;
+    line-height: 140%;
+    text-align: center;
+}
+
+.footer__descr {
+    margin-bottom: 4.5rem;
+    font-weight: 400;
+    font-size: var(--font-size);
+    line-height: 160%;
+    text-align: center;
+    color: rgba(256, 256, 256, .5);
+}
+
+.footer__btn {
+    margin-bottom: 4rem;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 29rem;
+}
+
+.social__item {
+    padding: 1.3rem;
+    border-radius: 100%;
+    background: linear-gradient(94.26deg, #C89AFC 9.51%, #7C6AFA 90.23%);
+}
+
+.social__item:not(:last-child) {
+    margin-right: 3rem;
+}
+
+.social__item img {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
